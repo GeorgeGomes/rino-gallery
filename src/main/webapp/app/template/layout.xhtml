@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:composite="http://java.sun.com/jsf/composite" xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html" xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<title>#{title}</title>
+	<h:outputScript name="js/bootstrap.min.js" />
+	<h:outputStylesheet name="css/bootstrap.min.css" />
+	<h:outputStylesheet name="css/style.css" />
+
+</h:head>
+<h:body>
+	<p:growl id="messages" showDetail="true" life="10000" showSummary="false" />
+
+	<h:form id="formLayout">
+
+		<div style="color: #ffffff; font-size: 11px; background-color: #000000; padding: 5px">
+			<div style="float: left; width: 300px; font-size: 20px; font-weight: bold">RINO</div>
+			<div style="float: right; width: 300px; text-align: right">
+				<p:outputPanel style="display:block" rendered="#{authController.username != 'anonymousUser'}">
+					<h:outputText value="Bem vindo #{authController.username} | " />
+					<p:commandLink id="logout" actionListener="#{authController.logout()}" ajax="false" style="color:#ffffff">
+						<h:outputText value="Logout" />
+					</p:commandLink>
+				</p:outputPanel>
+			</div>
+			<div style="clear: both"></div>
+		</div>
+	</h:form>
+	<div>
+		<div id="header">
+			<ui:insert name="header">
+				<ui:include src="/app/template/header.xhtml" />
+			</ui:insert>
+		</div>
+		<div id="header">
+			<ui:insert name="header">
+				<ui:include src="/app/template/menu.xhtml" />
+			</ui:insert>
+		</div>
+		<div id="content">
+			<ui:insert name="content">
+				<ui:include src="/app/index.xhtml" />
+			</ui:insert>
+		</div>
+	</div>
+	<div id="footer">
+		<ui:insert name="footer">
+			<ui:include src="/app/template/footer.xhtml" />
+		</ui:insert>
+	</div>
+</h:body>
+</html>

@@ -1,0 +1,53 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:composite="http://java.sun.com/jsf/composite" xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html" xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+
+</h:head>
+<h:body>
+	<ui:composition template="/app/template/layout.xhtml">
+		<ui:param name="title" value="ADMINISTRADOR" />
+		<ui:define name="content">
+
+			<div class="panel panel-default" style="width: 90%; margin: 30px auto 0 auto">
+				<div class="panel-heading" style="font-size: 20px; text-transform: uppercase; font-weight: bold">
+					RINO - PAINEL DE ADMINISTRAÇÃO
+					<div style="clear: both"></div>
+				</div>
+				<div class="panel-body">
+					<h:form id="form">
+						<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+
+						<div class="panel panel-default" style="width: 90%; margin: 0 auto">
+							<div class="panel-heading" style="font-size: 20px; text-transform: uppercase; font-weight: bold">
+								GALERIA
+								<div style="clear: both"></div>
+							</div>
+							<div class="panel-body">
+
+								<p:commandButton value="TODAS AS FOTOS" style="margin:4px;float:left;font-size:16px;width:300px;font-weight:bold" action="#{utilBean.redirect('admin/gallery')}" />
+
+								<p:commandButton value="PENDENTES DE ENVIO" style="margin:4px;float:left;font-size:16px;width:300px;font-weight:bold" action="#{utilBean.redirect('admin/gallery/pending')}" />
+
+								<div style="clear: both"></div>
+							</div>
+						</div>
+
+						<div class="panel panel-default" style="width: 90%; margin: 0 auto">
+							<div class="panel-heading" style="font-size: 20px; text-transform: uppercase; font-weight: bold">
+								CONFIGURAÇÕES
+								<div style="clear: both"></div>
+							</div>
+							<div class="panel-body">
+								<p:commandButton value="CONFIGURAÇÕES GERAIS" style="margin:4px;float:left;font-size:16px;width:300px;font-weight:bold" action="#{utilBean.redirect('admin/configuration')}" />
+
+								<div style="clear: both"></div>
+							</div>
+						</div>
+
+					</h:form>
+				</div>
+			</div>
+		</ui:define>
+	</ui:composition>
+</h:body>
+</html>

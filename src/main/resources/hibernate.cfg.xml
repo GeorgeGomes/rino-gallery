@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+          "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+          "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+
+	<session-factory>
+		<property name="connection.provider_class">org.hibernate.connection.C3P0ConnectionProvider</property>
+		<property name="connection.autoReconnect"> true</property>
+		<property name="connection.autoReconnectForPools">true</property>
+		<property name="connection.is-connection-validation-required">true</property>
+
+		<property name="hibernate.c3p0.min_size">5</property>
+		<property name="hibernate.c3p0.max_size">20</property>
+		<property name="hibernate.c3p0.timeout">300</property>
+		<property name="hibernate.c3p0.max_statements">50</property>
+		<property name="hibernate.c3p0.idle_test_period">3000</property>
+
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.connection.CharSet">utf8</property>
+		<property name="hibernate.connection.characterEncoding">utf8</property>
+		<property name="hibernate.connection.useUnicode">true</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/rinomachine</property>
+		<property name="hibernate.connection.username">root</property>
+		<!-- <property name="hibernate.connection.url">jdbc:mysql://mysql.rinomachine.com.br:3306/rinomachine</property> -->
+		<!-- <property name="hibernate.connection.username">rinomachine</property> -->
+		<!-- <property name="hibernate.connection.password">1george1</property> -->
+
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="hibernate.show_sql">true</property>
+		<property name="hibernate.format_sql">true</property>
+		<property name="hibernate.use_sql_comments">true</property>
+		
+		<!-- CRIA AS TABELAS NO BANCO CASO NÃO EXISTA -->
+		<property name="hibernate.hbm2ddl.auto">update</property>
+		
+		<!-- MAPEAMENTOS DOS POJOS -->
+		<mapping class="br.com.rino.entity.Photo" />
+		<mapping class="br.com.rino.entity.ConfigGeneral" />
+		<!-- MAPEAMENTOS DOS POJOS - AUTH -->
+		<mapping class="auth.model.User" />
+		<mapping class="auth.model.Role" />
+
+	</session-factory>
+
+</hibernate-configuration>
