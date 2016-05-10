@@ -1,42 +1,42 @@
 <pretty-config xmlns="http://ocpsoft.com/prettyfaces/3.3.0" 
                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
                xsi:schemaLocation="http://ocpsoft.com/prettyfaces/3.3.0
-                                   		http://ocpsoft.com/xml/ns/prettyfaces/ocpsoft-pretty-faces-3.3.0.xsd">
+                                  http://ocpsoft.com/xml/ns/prettyfaces/ocpsoft-pretty-faces-3.3.0.xsd">
 
     <url-mapping id="index">
         <pattern value="/"></pattern>
-        <view-id>/index.xhtml</view-id>
+        <view-id value="/index.xhtml"/>
     </url-mapping>
 	
 	 <url-mapping id="login">
         <pattern value="/login"></pattern>
-        <view-id>/app/auth/login.xhtml</view-id>
+        <view-id value="/app/auth/login.xhtml"/>
     </url-mapping>
 	
     <url-mapping id="logout">
         <pattern value="/logout"></pattern>
-        <view-id>/index.xhtml</view-id>
+        <view-id value="/index.xhtml"/>
         <action>#{authController.logout}</action>
     </url-mapping>
     
     <url-mapping id="admin/configuration">
         <pattern value="/admin/configuration"></pattern>
-        <view-id>/app/admin/general/configGeneral.xhtml</view-id>
+        <view-id value="/app/admin/general/configGeneral.xhtml"/>
     </url-mapping>
     
     <url-mapping id="admin/gallery">
         <pattern value="/admin/gallery"></pattern>
-        <view-id>/app/admin/gallery/gallery.xhtml</view-id>
+        <view-id value="/app/admin/gallery/gallery.xhtml"/>
     </url-mapping>
     
     <url-mapping id="gallery/pending">
         <pattern value="/admin/gallery/pending"></pattern>
-        <view-id>/app/admin/gallery/galleryPending.xhtml</view-id>
+        <view-id value="/app/admin/gallery/galleryPending.xhtml"/>
     </url-mapping>
     
     <url-mapping id="view/photo">
         <pattern value="/view/photo"></pattern>
-        <view-id>/app/photo.xhtml</view-id>
+        <view-id value="/app/photo.xhtml" />
     </url-mapping>
     
    <!-- Begin Example RewriteRules 
