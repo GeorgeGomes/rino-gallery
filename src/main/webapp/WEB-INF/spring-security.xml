@@ -12,6 +12,7 @@
  
     <context:property-placeholder location="classpath:jdbc.properties" />
     
+    
     <http auto-config="true" use-expressions="true">
         <!-- 
 	        permitAll 						=	Always true
