@@ -5,9 +5,9 @@
 	version="2.5">
 	<display-name>Rino Gallery</display-name>
 
-	<session-config>
-		<session-timeout>30</session-timeout>
-	</session-config>
+<!-- 	<session-config> -->
+<!-- 		<session-timeout>30</session-timeout> -->
+<!-- 	</session-config> -->
 
 	<context-param>
 		<param-name>javax.faces.PROJECT_STAGE</param-name>
