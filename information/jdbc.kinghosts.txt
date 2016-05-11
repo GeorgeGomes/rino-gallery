@@ -1,4 +1,0 @@
-##### JDBC - KING HOSTS #####
-URL: jdbc:mysql://mysql.rinomachine.com.br:3306/rinomachine
-USER: rinomachine
-PASSWORD: 1george1
