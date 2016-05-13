@@ -8,11 +8,9 @@
   <classpathentry kind="var" path="M2_REPO/javax/servlet/servlet-api/2.5/servlet-api-2.5.jar" sourcepath="M2_REPO/javax/servlet/servlet-api/2.5/servlet-api-2.5-sources.jar"/>
   <classpathentry kind="var" path="M2_REPO/javax/mail/mail/1.5.0-b01/mail-1.5.0-b01.jar"/>
   <classpathentry kind="var" path="M2_REPO/javax/activation/activation/1.1/activation-1.1.jar"/>
-  <classpathentry kind="var" path="M2_REPO/javax/transaction/jta/1.1/jta-1.1.jar"/>
   <classpathentry kind="var" path="M2_REPO/javax/servlet/jstl/1.2/jstl-1.2.jar" sourcepath="M2_REPO/javax/servlet/jstl/1.2/jstl-1.2-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/javax/transaction/jta/1.1/jta-1.1.jar"/>
   <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
-  <classpathentry kind="var" path="M2_REPO/junit/junit/4.12/junit-4.12.jar" sourcepath="M2_REPO/junit/junit/4.12/junit-4.12-sources.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar"/>
   <classpathentry kind="var" path="M2_REPO/commons-codec/commons-codec/1.10/commons-codec-1.10.jar"/>
   <classpathentry kind="var" path="M2_REPO/com/ocpsoft/prettyfaces-jsf2/3.3.3/prettyfaces-jsf2-3.3.3.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/springframework/integration/spring-integration-mail/4.2.5.RELEASE/spring-integration-mail-4.2.5.RELEASE.jar"/>
@@ -34,12 +32,38 @@
   <classpathentry kind="var" path="M2_REPO/org/springframework/spring-test/4.2.5.RELEASE/spring-test-4.2.5.RELEASE.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/springframework/security/spring-security-core/4.0.4.RELEASE/spring-security-core-4.0.4.RELEASE.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/springframework/security/spring-security-config/4.0.4.RELEASE/spring-security-config-4.0.4.RELEASE.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/springframework/security/spring-security-taglibs/4.0.4.RELEASE/spring-security-taglibs-4.0.4.RELEASE.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/springframework/security/spring-security-acl/4.0.4.RELEASE/spring-security-acl-4.0.4.RELEASE.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/springframework/spring-jdbc/4.2.5.RELEASE/spring-jdbc-4.2.5.RELEASE.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/springframework/security/spring-security-web/4.0.4.RELEASE/spring-security-web-4.0.4.RELEASE.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/springframework/spring-web/4.2.5.RELEASE/spring-web-4.2.5.RELEASE.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/springframework/spring-aspects/4.2.5.RELEASE/spring-aspects-4.2.5.RELEASE.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/aspectj/aspectjweaver/1.8.8/aspectjweaver-1.8.8.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/springframework/spring-orm/4.2.5.RELEASE/spring-orm-4.2.5.RELEASE.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/springframework/spring-jdbc/4.2.5.RELEASE/spring-jdbc-4.2.5.RELEASE.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/eclipse/equinox/app/1.0.0-v20070606/app-1.0.0-v20070606.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/eclipse/equinox/registry/3.5.400-v20140428-1507/registry-3.5.400-v20140428-1507.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/eclipse/equinox/common/3.6.200-v20130402-1505/common-3.6.200-v20130402-1505.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/primefaces/primefaces/5.3/primefaces-5.3.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/primefaces/extensions/primefaces-extensions/4.0.0/primefaces-extensions-4.0.0.jar"/>
+  <classpathentry kind="var" path="M2_REPO/com/google/code/gson/gson/2.2.4/gson-2.2.4.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/apache/commons/commons-lang3/3.1/commons-lang3-3.1.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/primefaces/themes/all-themes/1.0.10/all-themes-1.0.10.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/apache/myfaces/core/myfaces-api/2.2.9/myfaces-api-2.2.9.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/apache/geronimo/specs/geronimo-atinject_1.0_spec/1.0/geronimo-atinject_1.0_spec-1.0.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/apache/myfaces/core/myfaces-impl/2.2.9/myfaces-impl-2.2.9.jar"/>
+  <classpathentry kind="var" path="M2_REPO/commons-beanutils/commons-beanutils/1.8.3/commons-beanutils-1.8.3.jar"/>
+  <classpathentry kind="var" path="M2_REPO/commons-digester/commons-digester/1.8/commons-digester-1.8.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/apache/myfaces/tomahawk/tomahawk20/1.1.14/tomahawk20-1.1.14.jar"/>
+  <classpathentry kind="var" path="M2_REPO/commons-validator/commons-validator/1.3.1/commons-validator-1.3.1.jar"/>
+  <classpathentry kind="var" path="M2_REPO/commons-fileupload/commons-fileupload/1.2.1/commons-fileupload-1.2.1.jar" sourcepath="M2_REPO/commons-fileupload/commons-fileupload/1.2.1/commons-fileupload-1.2.1-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/commons-io/commons-io/1.3.2/commons-io-1.3.2.jar"/>
+  <classpathentry kind="var" path="M2_REPO/oro/oro/2.0.8/oro-2.0.8.jar"/>
+  <classpathentry kind="var" path="M2_REPO/batik/batik-awt-util/1.6-1/batik-awt-util-1.6-1.jar"/>
+  <classpathentry kind="var" path="M2_REPO/batik/batik-util/1.6-1/batik-util-1.6-1.jar"/>
+  <classpathentry kind="var" path="M2_REPO/batik/batik-gui-util/1.6-1/batik-gui-util-1.6-1.jar"/>
+  <classpathentry kind="var" path="M2_REPO/batik/batik-ext/1.6-1/batik-ext-1.6-1.jar"/>
+  <classpathentry kind="var" path="M2_REPO/xml-apis/xmlParserAPIs/2.0.2/xmlParserAPIs-2.0.2.jar"/>
+  <classpathentry kind="var" path="M2_REPO/mysql/mysql-connector-java/5.1.37/mysql-connector-java-5.1.37.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/hibernate/hibernate-core/5.1.0.Final/hibernate-core-5.1.0.Final.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/jboss/logging/jboss-logging/3.3.0.Final/jboss-logging-3.3.0.Final.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.0.Final/hibernate-jpa-2.1-api-1.0.0.Final.jar" sourcepath="M2_REPO/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.0.Final/hibernate-jpa-2.1-api-1.0.0.Final-sources.jar"/>
@@ -62,71 +86,13 @@
   <classpathentry kind="var" path="M2_REPO/org/eclipse/tycho/org.eclipse.jdt.core/3.9.1.v20130905-0837/org.eclipse.jdt.core-3.9.1.v20130905-0837.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/eclipse/text/3.3.0-v20070606-0010/text-3.3.0-v20070606-0010.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/eclipse/core/commands/3.3.0-I20070605-0010/commands-3.3.0-I20070605-0010.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/eclipse/equinox/common/3.6.200-v20130402-1505/common-3.6.200-v20130402-1505.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/eclipse/core/runtime/3.9.0-v20130326-1255/runtime-3.9.0-v20130326-1255.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/eclipse/osgi/3.10.0-v20140606-1445/osgi-3.10.0-v20140606-1445.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/eclipse/core/jobs/3.6.0-v20140424-0053/jobs-3.6.0-v20140424-0053.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/eclipse/equinox/registry/3.5.400-v20140428-1507/registry-3.5.400-v20140428-1507.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/eclipse/equinox/preferences/3.5.200-v20140224-1527/preferences-3.5.200-v20140224-1527.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/eclipse/core/contenttype/3.4.200-v20140207-1251/contenttype-3.4.200-v20140207-1251.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/eclipse/equinox/app/1.0.0-v20070606/app-1.0.0-v20070606.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/slf4j/slf4j-api/1.5.8/slf4j-api-1.5.8.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/primefaces/primefaces/5.3/primefaces-5.3.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/primefaces/extensions/primefaces-extensions/4.0.0/primefaces-extensions-4.0.0.jar"/>
-  <classpathentry kind="var" path="M2_REPO/com/google/code/gson/gson/2.2.4/gson-2.2.4.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/apache/commons/commons-lang3/3.1/commons-lang3-3.1.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/primefaces/extensions/all-themes/1.0.8/all-themes-1.0.8.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/primefaces/themes/afterdark/1.0.8/afterdark-1.0.8.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/primefaces/themes/afternoon/1.0.8/afternoon-1.0.8.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/primefaces/themes/afterwork/1.0.8/afterwork-1.0.8.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/primefaces/themes/black-tie/1.0.8/black-tie-1.0.8.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/primefaces/themes/blitzer/1.0.8/blitzer-1.0.8.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/primefaces/themes/bluesky/1.0.8/bluesky-1.0.8.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/primefaces/themes/bootstrap/1.0.8/bootstrap-1.0.8.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/primefaces/themes/casablanca/1.0.8/casablanca-1.0.8.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/primefaces/themes/cruze/1.0.8/cruze-1.0.8.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/primefaces/themes/cupertino/1.0.8/cupertino-1.0.8.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/primefaces/themes/dark-hive/1.0.8/dark-hive-1.0.8.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/primefaces/themes/dot-luv/1.0.8/dot-luv-1.0.8.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/primefaces/themes/eggplant/1.0.8/eggplant-1.0.8.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/primefaces/themes/excite-bike/1.0.8/excite-bike-1.0.8.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/primefaces/themes/flick/1.0.8/flick-1.0.8.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/primefaces/themes/glass-x/1.0.8/glass-x-1.0.8.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/primefaces/themes/hot-sneaks/1.0.8/hot-sneaks-1.0.8.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/primefaces/themes/humanity/1.0.8/humanity-1.0.8.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/primefaces/themes/le-frog/1.0.8/le-frog-1.0.8.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/primefaces/themes/midnight/1.0.8/midnight-1.0.8.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/primefaces/themes/mint-choc/1.0.8/mint-choc-1.0.8.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/primefaces/themes/overcast/1.0.8/overcast-1.0.8.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/primefaces/themes/pepper-grinder/1.0.8/pepper-grinder-1.0.8.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/primefaces/themes/redmond/1.0.8/redmond-1.0.8.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/primefaces/themes/rocket/1.0.8/rocket-1.0.8.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/primefaces/themes/sam/1.0.8/sam-1.0.8.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/primefaces/themes/smoothness/1.0.8/smoothness-1.0.8.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/primefaces/themes/south-street/1.0.8/south-street-1.0.8.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/primefaces/themes/start/1.0.8/start-1.0.8.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/primefaces/themes/sunny/1.0.8/sunny-1.0.8.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/primefaces/themes/swanky-purse/1.0.8/swanky-purse-1.0.8.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/primefaces/themes/trontastic/1.0.8/trontastic-1.0.8.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/primefaces/themes/ui-darkness/1.0.8/ui-darkness-1.0.8.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/primefaces/themes/ui-lightness/1.0.8/ui-lightness-1.0.8.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/primefaces/themes/vader/1.0.8/vader-1.0.8.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/primefaces/themes/home/1.0.8/home-1.0.8.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/apache/myfaces/core/myfaces-api/2.2.9/myfaces-api-2.2.9.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/apache/geronimo/specs/geronimo-atinject_1.0_spec/1.0/geronimo-atinject_1.0_spec-1.0.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/apache/myfaces/core/myfaces-impl/2.2.9/myfaces-impl-2.2.9.jar"/>
-  <classpathentry kind="var" path="M2_REPO/commons-beanutils/commons-beanutils/1.8.3/commons-beanutils-1.8.3.jar"/>
-  <classpathentry kind="var" path="M2_REPO/commons-digester/commons-digester/1.8/commons-digester-1.8.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/apache/myfaces/tomahawk/tomahawk20/1.1.14/tomahawk20-1.1.14.jar"/>
-  <classpathentry kind="var" path="M2_REPO/commons-validator/commons-validator/1.3.1/commons-validator-1.3.1.jar"/>
-  <classpathentry kind="var" path="M2_REPO/commons-fileupload/commons-fileupload/1.2.1/commons-fileupload-1.2.1.jar" sourcepath="M2_REPO/commons-fileupload/commons-fileupload/1.2.1/commons-fileupload-1.2.1-sources.jar"/>
-  <classpathentry kind="var" path="M2_REPO/commons-io/commons-io/1.3.2/commons-io-1.3.2.jar"/>
-  <classpathentry kind="var" path="M2_REPO/oro/oro/2.0.8/oro-2.0.8.jar"/>
-  <classpathentry kind="var" path="M2_REPO/batik/batik-awt-util/1.6-1/batik-awt-util-1.6-1.jar"/>
-  <classpathentry kind="var" path="M2_REPO/batik/batik-util/1.6-1/batik-util-1.6-1.jar"/>
-  <classpathentry kind="var" path="M2_REPO/batik/batik-gui-util/1.6-1/batik-gui-util-1.6-1.jar"/>
-  <classpathentry kind="var" path="M2_REPO/batik/batik-ext/1.6-1/batik-ext-1.6-1.jar"/>
-  <classpathentry kind="var" path="M2_REPO/xml-apis/xmlParserAPIs/2.0.2/xmlParserAPIs-2.0.2.jar"/>
-  <classpathentry kind="var" path="M2_REPO/mysql/mysql-connector-java/5.1.37/mysql-connector-java-5.1.37.jar"/>
   <classpathentry kind="var" path="M2_REPO/log4j/log4j/1.2.17/log4j-1.2.17.jar"/>
+  <classpathentry kind="var" path="M2_REPO/junit/junit/4.12/junit-4.12.jar" sourcepath="M2_REPO/junit/junit/4.12/junit-4.12-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar"/>
 </classpath>
