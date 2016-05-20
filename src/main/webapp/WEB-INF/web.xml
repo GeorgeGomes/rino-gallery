@@ -25,15 +25,6 @@
 		<param-name>com.ocpsoft.pretty.CONFIG_FILES</param-name>
 		<param-value>/WEB-INF/pretty-config.xml</param-value>
 	</context-param>
-	
-	<servlet>
-		<servlet-name>servlet-endPhoto</servlet-name>
-		<servlet-class>br.com.rino.servlet.EndPhoto</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>servlet-endPhoto</servlet-name>
-		<url-pattern>/servlet/endPhoto</url-pattern>
-	</servlet-mapping>
 
 	<servlet>
 		<servlet-name>servlet-transfer</servlet-name>

@@ -7,23 +7,17 @@
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:p="http://primefaces.org/ui" lang="pt-BR"
 	xmlns:fb='http://ogp.me/ns/fb#'>
-
-<f:event listener="#{photoBean.token(param['code'])}"
-	type="preRenderView" />
-
 <h:head>
-
-<script>
-//location = 'https://www.facebook.com/dialog/share?app_id=632009673603742&amp;href=#{photoBean.getUrl()}&amp;display=touch&amp;redirect_uri=http%3A%2F%2Flocalhost:8090%2Frino-gallery%2Fservlet%2FendPhoto';
-
-</script>
-<script>
-
-</script>
+ 	<h:outputScript name="js/bootstrap.min.js" />
+	<h:outputStylesheet name="css/bootstrap.min.css" />
 </h:head>
-
 <h:body>
-token
+<div style="padding:10px;background-color:#000000;width:100%;color:#ffffff">
+<h1>Só não esqueça de sair de seu facebook!</h1>
+</div>
+
+Redireciona para: #{configGeneralBean.listConfigGeneral().get(0).urlEndPhoto}
+
 <button onclick="logout()">logout</button>
 <button onclick="login()">login</button>
 <button onclick="share()">share</button>

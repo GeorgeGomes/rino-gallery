@@ -19,76 +19,64 @@ public class UtilBean {
 			e.printStackTrace();
 		}
 	}
-	
-	public void initAppAlone(String url){
+
+	public void initAppAlone(String url) {
 		try {
 			JSFUtil.initAppAlone(url);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
-	
-	public Object getSessionObj(String id){
+
+	public Object getSessionObj(String id) {
 		return JSFUtil.getSessionObj(id);
 	}
-	
-	public String getRequestURL(){
-	    Object request = FacesContext.getCurrentInstance().getExternalContext().getRequest();
-	    if(request instanceof HttpServletRequest)
-	    {
-	            return ((HttpServletRequest) request).getRequestURL().toString();
-	    }else
-	    {
-	        return "";
-	    }
+
+	public String getRequestURL() {
+		Object request = FacesContext.getCurrentInstance().getExternalContext().getRequest();
+		if (request instanceof HttpServletRequest) {
+			return ((HttpServletRequest) request).getRequestURL().toString();
+		} else {
+			return "";
+		}
 	}
-	
-	public String getFullURL(){
-	    Enumeration<String> lParameters;
-	    String sParameter;
-	    StringBuilder sbURL = new StringBuilder();
-	    Object oRequest = FacesContext.getCurrentInstance().getExternalContext().getRequest();
 
-	    try
-	    {
-	        if(oRequest instanceof HttpServletRequest)
-	        {
-	            sbURL.append(((HttpServletRequest)oRequest).getRequestURL().toString());
+	public String getFullURL() {
+		Enumeration<String> lParameters;
+		String sParameter;
+		StringBuilder sbURL = new StringBuilder();
+		Object oRequest = FacesContext.getCurrentInstance().getExternalContext().getRequest();
 
-	            lParameters = ((HttpServletRequest)oRequest).getParameterNames();
+		try {
+			if (oRequest instanceof HttpServletRequest) {
+				sbURL.append(((HttpServletRequest) oRequest).getRequestURL().toString());
 
-	            if(lParameters.hasMoreElements())
-	            {
-	                if(!sbURL.toString().contains("?"))
-	                {
-	                    sbURL.append("?");
-	                }
-	                else
-	                {
-	                    sbURL.append("&");
-	                }
-	            }
+				lParameters = ((HttpServletRequest) oRequest).getParameterNames();
 
-	            while(lParameters.hasMoreElements())
-	            {
-	                sParameter = lParameters.nextElement();
+				if (lParameters.hasMoreElements()) {
+					if (!sbURL.toString().contains("?")) {
+						sbURL.append("?");
+					} else {
+						sbURL.append("&");
+					}
+				}
 
-	                sbURL.append(sParameter);
-	                sbURL.append("=");
-	                sbURL.append(URLEncoder.encode(((HttpServletRequest)oRequest).getParameter(sParameter),"UTF-8"));
+				while (lParameters.hasMoreElements()) {
+					sParameter = lParameters.nextElement();
 
-	                if(lParameters.hasMoreElements())
-	                {
-	                    sbURL.append("&");
-	                }
-	            }
-	        }
-	    }
-	    catch(Exception e)
-	    {
-	        // Do nothing
-	    }
+					sbURL.append(sParameter);
+					sbURL.append("=");
+					sbURL.append(URLEncoder.encode(((HttpServletRequest) oRequest).getParameter(sParameter), "UTF-8"));
 
-	    return sbURL.toString();
+					if (lParameters.hasMoreElements()) {
+						sbURL.append("&");
+					}
+				}
+			}
+		} catch (Exception e) {
+			// Do nothing
+		}
+
+		return sbURL.toString();
 	}
 }

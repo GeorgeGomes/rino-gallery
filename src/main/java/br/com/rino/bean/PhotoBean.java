@@ -24,15 +24,10 @@ import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
 import javax.mail.util.ByteArrayDataSource;
 
-import org.springframework.social.facebook.api.Facebook;
-import org.springframework.social.facebook.api.FacebookLink;
-import org.springframework.social.facebook.api.impl.FacebookTemplate;
-
 import br.com.rino.dao.ConfigGeneralDAO;
 import br.com.rino.dao.PhotoDAO;
 import br.com.rino.entity.ConfigGeneral;
 import br.com.rino.entity.Photo;
-import br.com.rino.util.JSFUtil;
 
 @ManagedBean(name = "photoBean")
 @SessionScoped
@@ -42,17 +37,15 @@ public class PhotoBean {
 	private PhotoDAO photoDAO = new PhotoDAO();
 	private ConfigGeneralDAO configGeneralDAO = new ConfigGeneralDAO();
 	private String image;
-	private String token;
-	private String url;
-	
-	public void prepareUrl(String url){
-		this.url = url;
+	private String publish;
+
+	public String getPublish() {
+		return publish;
 	}
-	
-	public String getUrl(){
-		return this.url;
+
+	public void setPublish(String publish) {
+		this.publish = publish;
 	}
-	
 
 	public String getImage() {
 		return image;
@@ -61,31 +54,11 @@ public class PhotoBean {
 	public void setImage(String image) {
 		this.image = image;
 	}
-
-	public void editPhoto(String nomeFoto) {
-		this.setPhoto(photoDAO.edit(nomeFoto));
-	}
 	
 	public void editPhoto() {
 		this.setPhoto(photoDAO.edit(image));
 	}
 
-	public void token(String code){
-		token = code;
-		
-//		Facebook facebook = new FacebookTemplate(code);
-//		
-//		FacebookLink link = new FacebookLink("http://www.springsource.org/spring-social", 
-//		        "Spring Social", 
-//		        "The Spring Social Project", 
-//		        "Spring Social is an extension to Spring to enable applications to connect with service providers.");
-//		
-//		facebook.feedOperations().postLink("I'm trying out Spring Social!", link);
-
-		//JSFUtil.redirect("https://www.facebook.com/logout.php?next=http%3A%2F%2Flocalhost:8090%2Frino-gallery%2Fservlet%2FendPhoto&access_token="+code);
-		
-	}
-	
 	public void deletePhoto(Photo photo) {
 
 		photoDAO.delete(photo);

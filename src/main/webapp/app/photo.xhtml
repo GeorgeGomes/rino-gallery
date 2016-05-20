@@ -8,13 +8,7 @@
 	xmlns:p="http://primefaces.org/ui" lang="pt-BR"
 	xmlns:fb='http://ogp.me/ns/fb#'>
 
-<!-- <f:event listener="#{photoBean.editPhoto(param['file'])}" -->
-<!-- 	type="preRenderView" /> -->
-
 <f:event listener="#{photoBean.editPhoto()}"
-	type="preRenderView" />
-
-<f:event listener="#{photoBean.prepareUrl(utilBean.getFullURL())}"
 	type="preRenderView" />
 
 <h:head>
@@ -22,7 +16,7 @@
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<link
-		href="http://www.rinomachine.com.br/rino-gallery/images/dynamic/?file=#{photoBean.getPhoto().nomeFoto}"
+		href="http://#{configGeneralBean.listConfigGeneral().get(0).host}/rino-gallery/images/dynamic/?file=#{photoBean.getPhoto().nomeFoto}"
 		rel="image_src" />
 	<meta property="fb:app_id" content="#{configGeneralBean.listConfigGeneral().get(0).appId}" />
 
@@ -30,9 +24,9 @@
 	<meta property="og:locale" content="pt_BR" />
 	<meta property="og:site_name" content="Rino Machine - Eventos" />
 	<meta property="og:image:url"
-		content="http://www.rinomachine.com.br/rino-gallery/images/dynamic/?file=#{photoBean.getPhoto().nomeFoto}" />
+		content="http://#{configGeneralBean.listConfigGeneral().get(0).host}/rino-gallery/images/dynamic/?file=#{photoBean.getPhoto().nomeFoto}" />
 	<meta property="og:image"
-		content="http://www.rinomachine.com.br/rino-gallery/images/dynamic/?file=#{photoBean.getPhoto().nomeFoto}" />
+		content="http://#{configGeneralBean.listConfigGeneral().get(0).host}/rino-gallery/images/dynamic/?file=#{photoBean.getPhoto().nomeFoto}" />
 
 	<meta property="og:image:type" content="image/jpeg" />
 	<meta property="og:image:width" content="800" />
@@ -78,20 +72,18 @@ body {
 	<h:graphicImage
 		value="/images/dynamic/?file=#{photoBean.getPhoto().nomeFoto}"
 		styleClass="image-container" width="600" />
-<!-- 	<h:panelGroup layout="block" rendered="#{param['type']=='button'}"> -->
+		
+	<h:panelGroup layout="block" rendered="#{photoBean.publish=='publish'}">
 		<div
 			style="width: 600px; position: absolute; bottom: 20px; right: 20px">
-			
-			<p:commandButton value="postar" ajax="false" action="#{socialConfig.autenticarSpringComFacebook()}" />
-			
+
 			<a class="btn btn-default"
 				style="font-size: 30px; color: #ffffff; background-color: #3b5998"
-				href="https://www.facebook.com/dialog/share?app_id=#{configGeneralBean.listConfigGeneral().get(0).appId}&amp;href=#{utilBean.getFullURL()}&amp;display=touch&amp;redirect_uri=http%3A%2F%2Fwww.rinomachine.com.br%2Frino-gallery%2Fservlet%2FendPhoto">Publicar
+				href="https://www.facebook.com/dialog/share?app_id=#{configGeneralBean.listConfigGeneral().get(0).appId}&amp;href=#{utilBean.getFullURL()}&amp;display=touch&amp;redirect_uri=http%3A%2F%2F#{configGeneralBean.listConfigGeneral().get(0).host}%2Frino-gallery%2Ffacebook%2Flogout">Publicar
 				no Facebook</a> <a class="btn btn-default" style="font-size: 30px;"
-				href="http://www.rinomachine.com.br/rino-gallery/servlet/endPhoto">Não
-				Obrigado</a>
+				href="#{configGeneralBean.listConfigGeneral().get(0).urlEndPhoto}">Não Obrigado</a>
 		</div>
-<!-- 	</h:panelGroup> -->
+	</h:panelGroup>
 </h:form>
 </h:body>
 </html>

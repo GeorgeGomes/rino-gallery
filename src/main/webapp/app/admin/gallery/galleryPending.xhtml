@@ -42,7 +42,7 @@
 									</p:column>
 
 									<p:column headerText="">
-										<a href="photo.xhtml?file=#{data.nomeFoto}" target="_blank" style="color: #ffffff; height: 20px; font-size: 10px; width: 100px; display: block; font-weight: bold" class="btn btn-primary">ABRIR</a>
+										<a href="/rino-gallery/view/photo/#{data.nomeFoto}/nopublish" target="_blank" style="color: #ffffff; height: 20px; font-size: 10px; width: 100px; display: block; font-weight: bold" class="btn btn-primary">ABRIR</a>
 
 										<p:commandButton value="ENVIAR E-MAIL" style="height:20px;font-size:10px;width:100px;display:block;font-weight:bold" action="#{photoBean.sendMailAttach(data)}" ajax="true" update="form messages">
 											<p:confirm header="Confirma envio?" message="Deseja enviar e-mail para (#{data.email})?" icon="ui-icon-alert" />
