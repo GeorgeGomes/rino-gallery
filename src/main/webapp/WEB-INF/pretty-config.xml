@@ -35,7 +35,7 @@
     </url-mapping>
     
     <url-mapping id="view/photo">
-        <pattern value="/view/photo"></pattern>
+        <pattern value="/view/photo/#{ image : photoBean.image }"></pattern>
         <view-id value="/app/photo.xhtml" />
     </url-mapping>
     

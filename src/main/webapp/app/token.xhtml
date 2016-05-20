@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:composite="http://java.sun.com/jsf/composite"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui" lang="pt-BR"
+	xmlns:fb='http://ogp.me/ns/fb#'>
+
+<f:event listener="#{photoBean.token(param['code'])}"
+	type="preRenderView" />
+
+<h:head>
+
+<script>
+//location = 'https://www.facebook.com/dialog/share?app_id=632009673603742&amp;href=#{photoBean.getUrl()}&amp;display=touch&amp;redirect_uri=http%3A%2F%2Flocalhost:8090%2Frino-gallery%2Fservlet%2FendPhoto';
+
+</script>
+<script>
+
+</script>
+</h:head>
+
+<h:body>
+token
+<button onclick="logout()">logout</button>
+<button onclick="login()">login</button>
+<button onclick="share()">share</button>
+
+<div id="fb-root"></div>
+<script>
+	
+window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '632009673603742',
+      xfbml      : true,
+      version    : 'v2.5'
+    });
+    FB.Canvas.setAutoGrow();
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+  
+function logout(){
+	FB.getLoginStatus(function(response) {
+        if (response.status === 'connected') {
+        	console.log("conectado");
+            FB.logout(function(response) {
+                // this part just clears the $_SESSION var
+                // replace with your own code
+      console.log("logout")          
+            });
+        }else{
+        	console.log("disconectado");
+        }
+    });
+}
+
+function login() {
+    FB.login(function(response) {
+
+    // handle the response
+    console.log("Response goes here!");
+
+    }, {scope: 'public_profile'});            
+}
+
+function share(){
+	FB.ui({
+		  method: 'share',
+		  href: 'https://developers.facebook.com/docs/',
+		  display:'touch'
+		}, function(response){});
+}
+
+</script>
+
+<!-- https://www.facebook.com/logout.php?next=YOUR_REDIRECT_URL&access_token=USER_ACCESS_TOKEN -->
+</h:body>
+</html>

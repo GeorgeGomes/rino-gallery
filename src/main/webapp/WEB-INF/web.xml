@@ -43,7 +43,7 @@
 		<servlet-name>servlet-transfer</servlet-name>
 		<url-pattern>/servlet/transfer</url-pattern>
 	</servlet-mapping>
-
+	
 	<servlet>
 		<servlet-name>Dynamic Image Servlet</servlet-name>
 		<servlet-class>br.com.rino.servlet.DynamicImageServlet</servlet-class>

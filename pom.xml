@@ -35,9 +35,23 @@
 		<war.version>2.4</war.version>
 		<compiler.version>3.1</compiler.version>
 		<surefire.version>2.19.1</surefire.version>
+		<org.springframework.social-facebook-version>2.0.3.RELEASE</org.springframework.social-facebook-version>
+		<org.springframework.social-version>1.1.4.RELEASE</org.springframework.social-version>
+		
 	</properties>
 
 	<dependencies>
+		<dependency>
+			<groupId>org.springframework.social</groupId>
+			<artifactId>spring-social-facebook</artifactId>
+			<version>${org.springframework.social-facebook-version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.social</groupId>
+			<artifactId>spring-social-web</artifactId>
+			<version>${org.springframework.social-version}</version>
+		</dependency>
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>servlet-api</artifactId>

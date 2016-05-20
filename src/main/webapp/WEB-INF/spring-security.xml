@@ -25,6 +25,8 @@
 			hasAnyRole(role1, role2, ...)	=	User has at least one of the specified roles
          -->
         
+        <intercept-url pattern="/view/**" access="permitAll"/>
+        
         <intercept-url pattern="/admin/**" access="isAuthenticated()"/>
         <intercept-url pattern="/index.xhtml" access="isAuthenticated()"/>
     	

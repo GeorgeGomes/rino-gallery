@@ -21,7 +21,7 @@ public class EndPhoto extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
 	public void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
-		res.sendRedirect("http://localhost:8080/rino/app/photo/endPhoto.xhtml");
+		res.sendRedirect("http://localhost:8090/rino/app/photo/endPhoto.xhtml");
 		
 		for (Cookie cookie : req.getCookies()) {
 		    cookie.setValue("");
@@ -30,10 +30,10 @@ public class EndPhoto extends HttpServlet {
 
 		    res.addCookie(cookie);
 		}
-		
 	}
+	
 	public void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
-		res.sendRedirect("http://localhost:8080/rino/app/photo/endPhoto.xhtml");
+		res.sendRedirect("http://localhost:8090/rino/app/photo/endPhoto.xhtml");
 		
 		for (Cookie cookie : req.getCookies()) {
 		    cookie.setValue("");
@@ -41,8 +41,6 @@ public class EndPhoto extends HttpServlet {
 		    cookie.setPath("/");
 
 		    res.addCookie(cookie);
-		}
-		
+		}	
 	}
-
 }

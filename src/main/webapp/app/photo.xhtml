@@ -8,7 +8,13 @@
 	xmlns:p="http://primefaces.org/ui" lang="pt-BR"
 	xmlns:fb='http://ogp.me/ns/fb#'>
 
-<f:event listener="#{photoBean.editPhoto(param['file'])}"
+<!-- <f:event listener="#{photoBean.editPhoto(param['file'])}" -->
+<!-- 	type="preRenderView" /> -->
+
+<f:event listener="#{photoBean.editPhoto()}"
+	type="preRenderView" />
+
+<f:event listener="#{photoBean.prepareUrl(utilBean.getFullURL())}"
 	type="preRenderView" />
 
 <h:head>
@@ -68,13 +74,16 @@ body {
 <h1>#{photoBean.getPhoto().nomeEvento}</h1>
 <h4>#{photoBean.getPhoto().descricaoEvento}</h4>
 </div>
-
+<h:form>
 	<h:graphicImage
 		value="/images/dynamic/?file=#{photoBean.getPhoto().nomeFoto}"
 		styleClass="image-container" width="600" />
-	<h:panelGroup layout="block" rendered="#{param['type']=='button'}">
+<!-- 	<h:panelGroup layout="block" rendered="#{param['type']=='button'}"> -->
 		<div
 			style="width: 600px; position: absolute; bottom: 20px; right: 20px">
+			
+			<p:commandButton value="postar" ajax="false" action="#{socialConfig.autenticarSpringComFacebook()}" />
+			
 			<a class="btn btn-default"
 				style="font-size: 30px; color: #ffffff; background-color: #3b5998"
 				href="https://www.facebook.com/dialog/share?app_id=#{configGeneralBean.listConfigGeneral().get(0).appId}&amp;href=#{utilBean.getFullURL()}&amp;display=touch&amp;redirect_uri=http%3A%2F%2Fwww.rinomachine.com.br%2Frino-gallery%2Fservlet%2FendPhoto">Publicar
@@ -82,6 +91,7 @@ body {
 				href="http://www.rinomachine.com.br/rino-gallery/servlet/endPhoto">Não
 				Obrigado</a>
 		</div>
-	</h:panelGroup>
+<!-- 	</h:panelGroup> -->
+</h:form>
 </h:body>
 </html>
