@@ -24,6 +24,10 @@ public class TransferIntegrationTest {
     @Test
     public void test() throws IOException{
     	
+    	
+    	
+    	
+    	
     	//byte[] b = file.getContents();
     	
     	FileInputStream fis = new FileInputStream("C:/Users/georgeg/Desktop/teste.csv");

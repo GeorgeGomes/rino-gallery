@@ -35,8 +35,13 @@
     </url-mapping>
     
     <url-mapping id="view/photo">
-        <pattern value="/view/photo/#{ image : photoBean.image }"></pattern>
+        <pattern value="/view/photo/#{ image : photoBean.image }/#{publish : photoBean.publish}"></pattern>
         <view-id value="/app/photo.xhtml" />
+    </url-mapping>
+    
+    <url-mapping id="facebook/logout">
+        <pattern value="/facebook/logout"></pattern>
+        <view-id value="/app/facebookLogout.xhtml"/>
     </url-mapping>
     
    <!-- Begin Example RewriteRules 

@@ -23,8 +23,14 @@ public class ConfigGeneral implements Serializable {
 	@Column(name="cod_config")
 	private Long codConfig;
 	
+	@Column(name="host")
+	private String host;
+	
 	@Column(name="app_id")
 	private String appId;
+	
+	@Column(name="url_end_photo")
+	private String urlEndPhoto;
 	
 	@Column(name="email_host")
 	private String emailHost;
@@ -50,11 +56,24 @@ public class ConfigGeneral implements Serializable {
 	public void setCodConfig(Long codConfig) {
 		this.codConfig = codConfig;
 	}
+	
+	public String getHost() {
+		return host;
+	}
+	public void setHost(String host) {
+		this.host = host;
+	}
 	public String getAppId() {
 		return appId;
 	}
 	public void setAppId(String appId) {
 		this.appId = appId;
+	}
+	public String getUrlEndPhoto() {
+		return urlEndPhoto;
+	}
+	public void setUrlEndPhoto(String urlEndPhoto) {
+		this.urlEndPhoto = urlEndPhoto;
 	}
 	public String getEmailHost() {
 		return emailHost;
