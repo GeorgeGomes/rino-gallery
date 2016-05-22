@@ -20,11 +20,14 @@
 		<property name="hibernate.connection.CharSet">utf8</property>
 		<property name="hibernate.connection.characterEncoding">utf8</property>
 		<property name="hibernate.connection.useUnicode">true</property>
-		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/rinomachine</property>
-		<property name="hibernate.connection.username">root</property>
-		<!-- <property name="hibernate.connection.url">jdbc:mysql://mysql.rinomachine.com.br:3306/rinomachine</property> -->
-		<!-- <property name="hibernate.connection.username">rinomachine</property> -->
-		<!-- <property name="hibernate.connection.password">1george1</property> -->
+<!-- 	### LOCAL ### -->
+<!-- 	<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/rinomachine</property> -->
+<!-- 	<property name="hibernate.connection.username">root</property> -->
+
+<!-- 	### SERVER ### -->
+		<property name="hibernate.connection.url">jdbc:mysql://mysql.rinomachine.com.br:3306/rinomachine</property>
+		<property name="hibernate.connection.username">rinomachine</property>
+		<property name="hibernate.connection.password">1george1</property>
 
 		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
 		<property name="hibernate.show_sql">true</property>

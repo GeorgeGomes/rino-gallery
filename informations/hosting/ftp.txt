@@ -1,0 +1,5 @@
+##### FTP - KING HOSTS #####
+URL: ftp.rinomachine.com.br
+PORT: 
+USER: rinomachine
+PASSWORD: 1george1

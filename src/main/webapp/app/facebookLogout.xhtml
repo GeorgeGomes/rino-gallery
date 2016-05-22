@@ -16,66 +16,34 @@
 <h1>Só não esqueça de sair de seu facebook!</h1>
 </div>
 
-Redireciona para: #{configGeneralBean.listConfigGeneral().get(0).urlEndPhoto}
-
-<button onclick="logout()">logout</button>
-<button onclick="login()">login</button>
-<button onclick="share()">share</button>
+<div style="width:320px;margin:200px auto;">
+	<div style="float:left;width:100px">
+		<h:graphicImage value="/resources/images/hand-pointer.png" />
+	</div>
+	<div style="float:left;width:200px">
+		<div class="fb-login-button" data-max-rows="1" data-size="xlarge" data-show-faces="false" data-auto-logout-link="true" onlogin="callbackLogout()"></div>
+	</div>
+	<div style="clear:both"></div>
+</div>
 
 <div id="fb-root"></div>
 <script>
-	
-window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '632009673603742',
-      xfbml      : true,
-      version    : 'v2.5'
-    });
-    FB.Canvas.setAutoGrow();
-  };
-
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-  
-function logout(){
-	FB.getLoginStatus(function(response) {
-        if (response.status === 'connected') {
-        	console.log("conectado");
-            FB.logout(function(response) {
-                // this part just clears the $_SESSION var
-                // replace with your own code
-      console.log("logout")          
-            });
-        }else{
-        	console.log("disconectado");
-        }
-    });
-}
-
-function login() {
-    FB.login(function(response) {
-
-    // handle the response
-    console.log("Response goes here!");
-
-    }, {scope: 'public_profile'});            
-}
-
-function share(){
-	FB.ui({
-		  method: 'share',
-		  href: 'https://developers.facebook.com/docs/',
-		  display:'touch'
-		}, function(response){});
-}
-
+//<![CDATA[
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.6&appId=632009673603742";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+//]]>
 </script>
 
-<!-- https://www.facebook.com/logout.php?next=YOUR_REDIRECT_URL&access_token=USER_ACCESS_TOKEN -->
+<script>
+function callbackLogout(){
+	location = "#{configGeneralBean.listConfigGeneral().get(0).urlEndPhoto}";
+}
+</script>
+
 </h:body>
 </html>

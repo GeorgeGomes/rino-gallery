@@ -56,7 +56,7 @@
 		<beans:property name="driverClassName" value="com.mysql.jdbc.Driver" />
 		<beans:property name="url" value="${jdbc.url}" />
 		<beans:property name="username" value="${jdbc.username}" />
-		<!-- <beans:property name="password" value="${jdbc.password}" /> -->
+		<beans:property name="password" value="${jdbc.password}" />
 	</beans:bean>
  
 </beans:beans>
