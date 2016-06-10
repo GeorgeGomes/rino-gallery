@@ -36,6 +36,7 @@ public class DynamicImageServlet extends HttpServlet {
 			String file = request.getParameter("file");
 			PhotoDAO photoDAO = new PhotoDAO();
 			Photo photo = photoDAO.edit(file);
+			response.setContentType("image/jpeg");
 			response.getOutputStream().write(photo.getFile());
 			
 		} catch (IOException e) {
