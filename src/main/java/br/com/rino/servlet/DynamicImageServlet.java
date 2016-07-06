@@ -1,6 +1,7 @@
 package br.com.rino.servlet;
 
 import java.io.IOException;
+import java.io.OutputStream;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -37,7 +38,13 @@ public class DynamicImageServlet extends HttpServlet {
 			PhotoDAO photoDAO = new PhotoDAO();
 			Photo photo = photoDAO.edit(file);
 			response.setContentType("image/jpeg");
-			response.getOutputStream().write(photo.getFile());
+			OutputStream oImage = response.getOutputStream();
+			
+			oImage.write(photo.getFile());
+			oImage.flush();
+			oImage.close(); 
+			
+			
 			
 		} catch (IOException e) {
 

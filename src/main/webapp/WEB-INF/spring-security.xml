@@ -26,6 +26,7 @@
          -->
         
         <intercept-url pattern="/view/**" access="permitAll"/>
+        <intercept-url pattern="/images/**" access="permitAll"/>
         
         <intercept-url pattern="/admin/**" access="isAuthenticated()"/>
         <intercept-url pattern="/index.xhtml" access="isAuthenticated()"/>

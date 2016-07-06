@@ -16,17 +16,15 @@
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<link
-		href="http://#{configGeneralBean.listConfigGeneral().get(0).host}/rino-gallery/images/dynamic/?file=#{photoBean.getPhoto().nomeFoto}"
+		href="http://#{configGeneralBean.listConfigGeneral().get(0).host}/rino-gallery/images/dynamic/?file=#{param['image']}"
 		rel="image_src" />
 	<meta property="fb:app_id" content="#{configGeneralBean.listConfigGeneral().get(0).appId}" />
 
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<meta property="og:locale" content="pt_BR" />
 	<meta property="og:site_name" content="Rino Machine - Eventos" />
-	<meta property="og:image:url"
-		content="http://#{configGeneralBean.listConfigGeneral().get(0).host}/rino-gallery/images/dynamic/?file=#{photoBean.getPhoto().nomeFoto}" />
 	<meta property="og:image"
-		content="http://#{configGeneralBean.listConfigGeneral().get(0).host}/rino-gallery/images/dynamic/?file=#{photoBean.getPhoto().nomeFoto}" />
+		content="http://#{configGeneralBean.listConfigGeneral().get(0).host}/rino-gallery/images/dynamic/?file=#{param['image']}" />
 
 	<meta property="og:image:type" content="image/jpeg" />
 	<meta property="og:image:width" content="800" />
